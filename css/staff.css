@@ -1,0 +1,35 @@
+.staff-dashboard .sidebar { background:#19345b; }
+.staff-dashboard .sidebar-logo h2 { font-size:19px; letter-spacing:-.3px; }
+.staff-dashboard .staff-menu .menu-item { min-height:46px; }
+.staff-dashboard .staff-menu .menu-item.active { background:#29466e; color:#fff; box-shadow:inset 4px 0 #7fb0ef; }
+.staff-dashboard .staff-menu .menu-item:hover { background:#29466e; color:#fff; }
+.staff-dashboard .staff-help { margin-top:auto; padding-top:18px; }
+.staff-dashboard .logout-button { margin-top:16px; }
+.staff-dashboard .topbar { border:0; border-radius:12px; margin:16px 20px 0; padding:0 25px; }
+.staff-dashboard .content { max-width:none; padding:20px; }
+.staff-dashboard .welcome { margin-bottom:20px; }
+.staff-dashboard .welcome h2 { font-size:22px; }
+.staff-dashboard .dashboard-filters { border:0; border-radius:12px; box-shadow:0 2px 10px rgba(25,52,91,.04); }
+.staff-dashboard .technician-cards { grid-template-columns:repeat(5,minmax(0,1fr)); gap:14px; }
+.staff-dashboard .technician-cards .info-card { min-height:142px; border:0; border-radius:12px; padding:18px; }
+.staff-dashboard .technician-cards .card-header span,.staff-dashboard .technician-cards .info-card small { color:inherit; }
+.staff-dashboard .technician-cards .info-card strong { color:inherit; font-size:34px; }
+.staff-dashboard .technician-cards .card-icon { width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,.25); color:inherit; }
+.staff-dashboard .technician-cards .card-aberta { background:#ff655f; color:#4b1613; }
+.staff-dashboard .technician-cards .card-andamento { background:#fff76b; color:#19345b; }
+.staff-dashboard .technician-cards .card-concluida { background:#70d875; color:#123b28; }
+.staff-dashboard .technician-cards .card-sla { background:#f8c3dc; color:#55233d; border:0; }
+.staff-dashboard .technician-cards .card-total { background:#82b4f0; color:#19345b; border:0; }
+.staff-dashboard .technician-cards .card-total .card-header span,.staff-dashboard .technician-cards .card-sla .card-header span { color:inherit; }
+.staff-dashboard .occurrences-section { border-radius:12px; }
+.staff-dashboard .search-box { border-radius:24px; }
+.staff-dashboard .dashboard-filters select,.staff-dashboard .filter-button { border-radius:22px; }
+.staff-dashboard .respond-button { color:#19345b; }
+.staff-dashboard .respond-button:hover { background:#eef4fa; }
+.staff-dashboard .staff-panel { margin-bottom:18px; padding:20px; background:#fff; border:1px solid #e1e7eb; border-radius:12px; }
+.staff-dashboard .staff-panel h2,.staff-dashboard .staff-panel h3 { margin:0 0 6px; color:#19345b; }
+.staff-dashboard .staff-panel p { color:#718096; font-size:12px; }
+.staff-dashboard button:focus-visible,.staff-dashboard a:focus-visible,.staff-dashboard select:focus-visible,.staff-dashboard input:focus-visible { outline:3px solid #9fc5e7; outline-offset:2px; }
+@media(max-width:1100px){.staff-dashboard .technician-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:800px){.staff-dashboard .technician-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){.staff-dashboard .technician-cards{grid-template-columns:1fr}.staff-dashboard .topbar{height:auto;min-height:75px;margin:8px;padding:12px}.staff-dashboard .content{padding:12px}}

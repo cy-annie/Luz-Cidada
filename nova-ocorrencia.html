@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luz Cidadã | Nova Ocorrência</title>
+    <link rel="stylesheet" href="css/nova-ocorrencia.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-mark">LC</div>
+            <span><strong>Luz Cidadã</strong><small>Gestão de iluminação</small></span>
+        </div>
+
+        <nav class="menu">
+
+            <a href="dashboard.html" class="menu-item">
+                <span>⌂</span>
+                <strong>Visão geral</strong>
+            </a>
+
+            <a href="ocorrencias.html" class="menu-item">
+                <span>▤</span>
+                <strong>Ocorrências</strong>
+            </a>
+
+            <a href="nova-ocorrencia.html" class="menu-item active">
+                <span>＋</span>
+                <strong>Nova ocorrência</strong>
+            </a>
+
+            <a href="perfil.html" class="menu-item">
+                <span class="menu-icon person-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.7-3.7 3-5.5 7-5.5s6.3 1.8 7 5.5"></path></svg></span>
+                <span>Meu perfil</span>
+            </a>
+
+        </nav>
+            <div class="sidebar-help" aria-label="Ajuda e informações">
+                <a href="termos.html">Termos de Uso</a>
+                <a href="privacidade.html">Privacidade</a>
+                <a href="suporte.html">Suporte</a>
+            </div>
+
+        <button class="logout" id="logout">
+            <span>↪</span>
+            Sair
+        </button>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+    <div>
+
+        <h1>Nova ocorrência</h1>
+
+    </div>
+
+        <div class="user-area">
+            <div class="user-avatar" id="avatar">M</div>
+            <div class="user-info"><strong id="nomeUsuario">Morador</strong><span>Morador</span></div>
+        </div>
+    
+</header>
+
+        <section class="content">
+
+            <div class="page-introduction">
+                <h2>Registrar ocorrência</h2>
+
+                <p>
+                    Informe os dados do local e descreva o problema
+                    encontrado na iluminação pública.
+                </p>
+            </div>
+
+            <form id="ocorrenciaForm" class="occurrence-form">
+
+                <div class="form-section">
+
+                    <div class="section-title">
+                        <h3>Local da ocorrência</h3>
+                        <span>Informe onde o problema foi identificado.</span>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <div class="form-group small">
+                            <label for="cep">CEP</label>
+                            <input
+                                type="text"
+                                id="cep"
+                                placeholder="00000-000"
+                                maxlength="9"
+                                inputmode="numeric"
+                                autocomplete="postal-code"
+                                pattern="[0-9]{5}-?[0-9]{3}"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input
+                                type="text"
+                                id="cidade"
+                                placeholder="Digite a cidade"
+                                autocomplete="address-level2"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group small">
+                            <label for="estado">Estado (UF)</label>
+                            <input type="text" id="estado" placeholder="SP" maxlength="2" autocomplete="address-level1" required>
+                        </div>
+
+                        <div class="form-group small">
+                            <label for="numero">Número</label>
+                            <input
+                                type="text"
+                                id="numero"
+                                placeholder="Nº"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group large">
+                            <label for="endereco">Rua/Avenida</label>
+                            <input
+                                type="text"
+                                id="endereco"
+                                placeholder="Digite o nome da rua ou avenida"
+                                autocomplete="address-line1"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bairro">Bairro</label>
+                            <input
+                                type="text"
+                                id="bairro"
+                                placeholder="Digite o bairro"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="referencia">Ponto de referência <span>(opcional)</span></label>
+                            <input type="text" id="referencia" placeholder="Ex.: em frente à escola">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="form-section">
+
+                    <div class="section-title">
+                        <h3>Informações do problema</h3>
+                        <span>Descreva o problema encontrado.</span>
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="tipoProblema">Tipo de problema</label>
+
+                        <select id="tipoProblema" required>
+                            <option value="" disabled selected>
+                                Selecione o tipo de problema
+                            </option>
+                            <option value="lampada-apagada">
+                                Lâmpada apagada
+                            </option>
+                            <option value="lampada-piscando">
+                                Lâmpada piscando
+                            </option>
+                            <option value="poste-danificado">
+                                Poste danificado
+                            </option>
+                            <option value="fiação">
+                                Problema na fiação
+                            </option>
+                            <option value="outro">
+                                Outro
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="prioridade">Prioridade</label>
+                        <select id="prioridade" required>
+                            <option value="Média" selected>Média · atendimento regular</option>
+                            <option value="Alta">Alta · risco ou impacto elevado</option>
+                            <option value="Baixa">Baixa · problema pontual</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="descricao">Descrição</label>
+
+                        <textarea
+                            id="descricao"
+                            rows="5"
+                            placeholder="Descreva o problema encontrado..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="foto">Fotografia <span>(opcional)</span></label>
+
+                        <label class="upload-area" for="foto">
+
+                            <span class="upload-icon">↑</span>
+
+                            <strong>Adicionar fotografia</strong>
+
+                            <small>
+                                Clique para selecionar uma imagem
+                            </small>
+
+                        </label>
+
+                        <input
+                            type="file"
+                            id="foto"
+                            accept="image/*"
+                            hidden
+                        >
+
+                        <p id="file-name" class="file-name"></p>
+
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+
+    <button
+        type="button"
+        class="cancel-button"
+        id="cancelar"
+    >
+        Cancelar
+    </button>
+
+    <button
+        type="submit"
+        class="submit-button"
+    >
+        Registrar ocorrência
+    </button>
+
+</div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="js/nova-ocorrencia.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro - Luz Cidadã</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+
+<body>
+
+    <main class="cadastro-page">
+
+        <section class="cadastro-card">
+
+            <div class="cadastro-header">
+                <div class="logo-mark">LC</div>
+
+                <div>
+                    <h1>Luz Cidadã</h1>
+                    <span>Gestão de iluminação</span>
+                </div>
+            </div>
+
+            <div class="cadastro-title">
+                <h2>Crie sua conta</h2>
+                <p>Preencha os dados abaixo para realizar seu cadastro.</p>
+            </div>
+
+            <form id="cadastroForm">
+
+                <div class="form-group">
+                    <label for="nome">Nome completo</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        autocomplete="name"
+                        placeholder="Digite seu nome completo"
+                        required
+                    >
+                </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input
+                    type="tel"
+                    id="telefone"
+                    autocomplete="tel"
+                    placeholder="(19) 99999-9999"
+                    required
+                >
+            </div>
+
+                <div class="form-group">
+                    <label for="perfilCadastro">Perfil de acesso</label>
+                    <select id="perfilCadastro" required><option value="morador">Morador</option><option value="tecnico">Técnico</option><option value="gestor">Gestor</option></select>
+                    <small>Protótipo acadêmico: os perfis são demonstrativos e não possuem validação institucional.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        autocomplete="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        minlength="8"
+                        autocomplete="new-password"
+                        placeholder="Digite sua senha"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmarSenha">Confirmar senha</label>
+                    <input
+                        type="password"
+                        id="confirmarSenha"
+                        minlength="8"
+                        autocomplete="new-password"
+                        placeholder="Confirme sua senha"
+                        required
+                    >
+                </div>
+
+                <label class="terms-consent">
+                    <input type="checkbox" id="aceiteTermos" required>
+                    <span>Li e aceito os <a href="termos.html" target="_blank" rel="noopener">Termos de Uso</a> e a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</span>
+                </label>
+
+                <button type="submit" class="btn-cadastrar">
+                    Criar conta
+                </button>
+
+            </form>
+
+            <div class="divider"><span>Ou cadastre-se com</span></div>
+            <div class="social-login">
+                <button type="button" class="social-button" data-provider="Google" data-social-signup>
+                    <span class="social-icon google-mark" aria-hidden="true">G</span> Google
+                </button>
+                <button type="button" class="social-button" data-provider="Apple" data-social-signup>
+                    <svg class="social-icon apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.365 1.43c-.994.116-2.157.822-2.834 1.677-.615.77-1.125 1.91-.927 3.005 1.08.035 2.194-.613 2.866-1.48.634-.807 1.109-1.942.895-3.202zM20.11 17.13c-.48 1.084-.71 1.533-1.33 2.475-.864 1.318-2.084 2.96-3.595 2.973-1.346.01-1.692-.878-3.517-.87-1.825.01-2.205.883-3.552.873-1.51-.015-2.664-1.498-3.527-2.816-2.408-3.675-2.67-7.977-1.17-10.22 1.06-1.59 2.75-2.522 4.332-2.522 1.604 0 2.61.873 3.94.873 1.29 0 2.077-.873 3.938-.873 1.406 0 2.885.767 3.942 2.093-3.462 1.9-2.902 6.87.539 8.014z"></path></svg> Apple
+                </button>
+            </div>
+            <p class="social-demo-note">Protótipo local: esses botões demonstram o cadastro social e não validam uma conta Google ou Apple.</p>
+
+            <div class="voltar-login">
+                <span>Já possui uma conta?</span>
+                <a href="index.html">Voltar para o login</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <dialog class="social-dialog" id="socialSignupDialog" aria-labelledby="socialDialogTitle">
+        <form id="socialSignupForm" method="dialog">
+            <button class="dialog-close" type="button" id="closeSocialDialog" aria-label="Fechar">×</button>
+            <span class="dialog-eyebrow">CADASTRO DEMONSTRATIVO</span>
+            <h2 id="socialDialogTitle">Continuar com Google</h2>
+            <p>Este protótipo não se conecta ao provedor. Informe os dados que seriam retornados pela conta para concluir o fluxo local.</p>
+            <label for="socialName">Nome completo</label>
+            <input id="socialName" autocomplete="name" required>
+            <label for="socialProfile">Perfil de acesso</label>
+            <select id="socialProfile" required><option value="morador">Morador</option><option value="tecnico">Técnico</option><option value="gestor">Gestor</option></select>
+            <label for="socialEmail">E-mail</label>
+            <input id="socialEmail" type="email" autocomplete="email" required>
+            <label class="dialog-consent"><input id="socialTerms" type="checkbox" required><span>Aceito os <a href="termos.html" target="_blank" rel="noopener">Termos de Uso</a> e a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</span></label>
+            <p class="dialog-error" id="socialFeedback" role="alert" hidden></p>
+            <button class="btn-cadastrar" type="submit">Criar conta de demonstração</button>
+        </form>
+    </dialog>
+
+    <script src="js/auth.js"></script>
+    <script src="js/cadastro.js"></script>
+
+</body>
+</html>
+
+
+
