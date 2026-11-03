@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de ocorrências | Luz Cidadã</title>
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/staff.css"><link rel="stylesheet" href="css/operacao.css">
+</head>
+<body class="staff-dashboard">
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="sidebar-logo"><div class="logo-mark">LC</div><div><h2>Luz Cidadã</h2><span>Gestão de iluminação</span></div></div>
+      <nav class="menu staff-menu">
+        <a href="dashboard-tecnico.html" class="menu-item" data-staff-link="dashboard"><span class="menu-icon">⌂</span><span>Visão geral</span></a>
+        <a href="ocorrencias-tecnico.html" class="menu-item"><span class="menu-icon">▤</span><span>Ocorrências</span></a>
+        <a href="ocorrencias-tecnico.html?visao=triagem" class="menu-item manager-only" data-triage-link hidden><span class="menu-icon">⇄</span><span>Triagem e distribuição</span></a>
+        <a href="mapa.html" class="menu-item active" aria-current="page"><span class="menu-icon">⌖</span><span>Mapa</span></a>
+        <a href="relatorio.html" class="menu-item manager-only" hidden><span class="menu-icon">▥</span><span>Relatório</span></a>
+        <a href="perfil-tecnico.html" class="menu-item"><span class="menu-icon person-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.7-3.7 3-5.5 7-5.5s6.3 1.8 7 5.5"></path></svg></span><span>Meu perfil</span></a>
+      </nav>
+      <div class="sidebar-help staff-help"><a href="termos.html">Termos de Uso</a><a href="privacidade.html">Privacidade</a><a href="suporte.html">Suporte</a></div>
+      <button id="logout" class="logout-button"><span>↪</span><span>Sair</span></button>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><span class="breadcrumb" id="roleLabel">TÉCNICO</span><h1>Mapa de ocorrências</h1></div><div class="user-area"><div class="user-avatar" id="avatar">T</div><div class="user-info"><strong id="nomeUsuario">Técnico</strong><span>Técnico</span></div></div></header>
+      <section class="content">
+        <div class="staff-panel"><div class="panel-heading"><div><h2 id="mapCity">Ocorrências por região</h2><p>Selecione um marcador ou chamado para abrir seu atendimento.</p></div><select id="mapStatusFilter" aria-label="Filtrar status"><option value="">Todos os status</option><option value="Aberta">Abertos</option><option value="Em andamento">Em atendimento</option><option value="Concluída">Concluídos</option></select></div>
+          <div class="map-layout">
+            <div><div class="schematic-map" id="schematicMap" aria-label="Mapa ilustrativo de chamados"><div class="map-building b1"></div><div class="map-building b2"></div><div class="map-building b3"></div><div class="map-building b4"></div><div class="map-building b5"></div><div class="map-road"></div><div class="map-road vertical"></div><div class="map-legend">● Aberta　● Em atendimento　● Concluída</div></div><p class="map-disclaimer">Mapa demonstrativo: os registros atuais não guardam latitude/longitude. Os marcadores são esquemáticos e não representam posições ou distâncias reais.</p></div>
+            <aside class="map-case-list"><h2>Chamados</h2><div id="mapCaseList"></div></aside>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="js/mapa.js"></script>
+</body>
+</html>
+
+
+
