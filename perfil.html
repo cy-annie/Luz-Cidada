@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu perfil - Luz Cidadã</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <div class="logo-mark">
+                    LC
+                </div>
+
+                <div>
+                    <h2>Luz Cidadã</h2>
+                    <span>Gestão de iluminação</span>
+                </div>
+
+            </div>
+
+
+            <nav class="menu">
+
+                <a href="dashboard.html" class="menu-item">
+                    <span class="menu-icon">⌂</span>
+                    <span>Visão geral</span>
+                </a>
+
+                <a href="ocorrencias.html" class="menu-item">
+                    <span class="menu-icon">▤</span>
+                    <span>Ocorrências</span>
+                </a>
+
+                <a href="nova-ocorrencia.html" class="menu-item">
+                    <span class="menu-icon">＋</span>
+                    <span>Nova ocorrência</span>
+                </a>
+
+               <a href="perfil.html" class="menu-item active" aria-current="page">
+
+    <span class="menu-icon person-icon">
+
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+            <circle
+                cx="12"
+                cy="8"
+                r="3.5"
+            ></circle>
+
+            <path
+                d="M5 20c0-3.5 3.1-6 7-6s7 2.5 7 6"
+            ></path>
+
+        </svg>
+
+    </span>
+
+    <span>
+        Meu perfil
+    </span>
+
+</a>
+
+            </nav>
+            <div class="sidebar-help" aria-label="Ajuda e informações">
+                <a href="termos.html">Termos de Uso</a>
+                <a href="privacidade.html">Privacidade</a>
+                <a href="suporte.html">Suporte</a>
+            </div>
+
+
+            <button id="logout" class="logout-button">
+                <span>↪</span>
+                <span>Sair</span>
+            </button>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+                    <span class="breadcrumb">MORADOR</span>
+                    <h1>Meu perfil</h1>
+                </div>
+
+
+                <div class="user-area">
+
+                    <div class="user-avatar" id="avatar">
+                        M
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong id="nomeUsuario">
+                            Morador
+                        </strong>
+
+                        <span>Morador</span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <section class="content">
+
+                <div class="profile-page">
+
+                    <div class="profile-header">
+
+                        <div class="profile-photo-area">
+
+    <div
+        class="profile-photo"
+        id="profilePhoto"
+    >
+
+        <span id="profileInitial">
+            M
+        </span>
+
+    </div>
+
+
+    <button
+        type="button"
+        class="change-photo-button"
+        id="alterarFoto"
+        title="Alterar foto"
+    >
+
+        <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+        >
+
+            <path
+                d="M4 7h3l1.5-2h7L17 7h3v12H4V7z"
+            ></path>
+
+            <circle
+                cx="12"
+                cy="13"
+                r="3.5"
+            ></circle>
+
+        </svg>
+
+    </button>
+
+
+    <input
+        type="file"
+        id="fotoPerfil"
+        accept="image/*"
+        hidden
+    >
+
+</div>
+
+                        <div>
+                            <h2 id="profileName">
+                                Morador
+                            </h2>
+
+                            <span>
+                                Morador
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-section">
+
+                        <div class="section-title">
+
+                            <h3>Dados pessoais</h3>
+
+                            <p>
+                                Informações da sua conta no Luz Cidadã.
+                            </p>
+
+                        </div>
+
+
+                        <div class="profile-grid">
+
+                            <div class="profile-field">
+
+                                <label>Nome completo</label>
+
+                                <div
+                                    class="profile-value"
+                                    id="profileNome">
+                                    -
+                                </div>
+
+                            </div>
+
+
+                            <div class="profile-field">
+
+                                <label>E-mail</label>
+
+                                <div
+                                    class="profile-value"
+                                    id="profileEmail">
+                                    -
+                                </div>
+
+                            </div>
+
+                            <div class="profile-field">
+
+                                <label>Telefone</label>
+
+                                <div
+                                    class="profile-value"
+                                    id="profileTelefone">
+                                    -
+                                </div>
+
+                            </div>
+
+
+                            <div class="profile-field">
+
+                                <label>Tipo de usuário</label>
+
+                                <div
+                                    class="profile-value"
+                                    id="profilePerfil">
+                                    Morador
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="profile-card">
+                        <div class="profile-card-header">
+                            <h2>Segurança</h2>
+                            <p>Gerencie o acesso à sua conta.</p>
+                        </div>
+                        <div class="security-content">
+                            <div class="security-item">
+                                <div><strong>Senha</strong><span>Altere sua senha de acesso.</span></div>
+                                <button type="button" class="change-password-button" id="alterarSenha">Alterar senha</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/perfil.js"></script>
+
+</body>
+
+</html>

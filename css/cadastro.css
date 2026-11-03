@@ -1,0 +1,169 @@
+.cadastro-page {
+    min-height: 100vh;
+    background: #eef4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.cadastro-card {
+    width: 100%;
+    max-width: 480px;
+    background: #ffffff;
+    border: 1px solid #e2e8ee;
+    border-radius: 14px;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(20, 45, 70, 0.08);
+}
+
+.cadastro-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.logo-mark {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background: #19345b;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.cadastro-header h1 {
+    margin: 0;
+    color: #19345b;
+    font-size: 20px;
+}
+
+.cadastro-header span {
+    color: #718096;
+    font-size: 12px;
+}
+
+.cadastro-title {
+    margin-bottom: 25px;
+}
+
+.cadastro-title h2 {
+    margin: 0 0 7px;
+    color: #172b3a;
+    font-size: 24px;
+}
+
+.cadastro-title p {
+    margin: 0;
+    color: #718096;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #34495e;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 45px;
+    border: 1px solid #d7e0e7;
+    border-radius: 7px;
+    padding: 0 13px;
+    font-size: 14px;
+    color: #263746;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #2c6e9e;
+    box-shadow: 0 0 0 3px rgba(44, 110, 158, 0.08);
+}
+
+.btn-cadastrar {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 7px;
+    background: #19345b;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.btn-cadastrar:hover {
+    background: #25476e;
+}
+
+.btn-cadastrar:focus-visible { outline:3px solid #9fc5e7; outline-offset:2px; }
+.btn-cadastrar:active { transform:translateY(1px); }
+
+.voltar-login {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 13px;
+    color: #718096;
+}
+
+.voltar-login a {
+    color: #19345b;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.voltar-login a:hover {
+    text-decoration: underline;
+}
+
+.terms-consent { display:flex; align-items:flex-start; gap:9px; margin:4px 0 16px; color:#526579; font-size:12px; line-height:1.5; }
+.terms-consent input { width:15px; height:15px; margin-top:1px; flex:none; accent-color:#19345b; }
+.terms-consent a { color:#356b9f; }
+.social-demo-note { margin:10px 0 0; color:#8491a0; font-size:11px; line-height:1.45; text-align:center; }
+.google-mark { display:flex; align-items:center; justify-content:center; color:#4285f4; font-size:16px; font-weight:700; }
+.cadastro-card .divider { margin-top:22px; }
+
+.social-dialog { width:min(460px,calc(100vw - 28px)); padding:0; border:0; border-radius:14px; color:#263746; box-shadow:0 22px 70px rgba(15,35,60,.25); }
+.social-dialog::backdrop { background:rgba(13,32,53,.55); }
+.social-dialog form { position:relative; display:flex; flex-direction:column; gap:10px; padding:32px; }
+.social-dialog h2 { margin:0; color:#19345b; font-size:22px; }
+.social-dialog p { margin:0 0 8px; color:#718096; font-size:13px; line-height:1.5; }
+.social-dialog .dialog-eyebrow { color:#73849a; font-size:10px; font-weight:700; letter-spacing:1px; }
+.social-dialog label:not(.dialog-consent) { margin-top:4px; color:#34495e; font-size:13px; font-weight:600; }
+.social-dialog input:not([type=checkbox]) { width:100%; height:44px; padding:0 12px; border:1px solid #d7e0e7; border-radius:7px; color:#263746; font:14px Arial,sans-serif; }
+.social-dialog input:focus { outline:2px solid #9fc5e7; border-color:#527da8; }
+.dialog-consent { display:flex; align-items:flex-start; gap:9px; color:#526579; font-size:12px; line-height:1.5; }
+.dialog-consent input { width:15px; height:15px; flex:none; accent-color:#19345b; }
+.dialog-error { color:#b42318!important; font-weight:600; }
+.dialog-close { position:absolute; top:12px; right:14px; border:0; background:transparent; color:#617286; font-size:26px; cursor:pointer; }
+.social-dialog .btn-cadastrar { margin-top:4px; }
+
+@media (max-width: 550px) {
+
+    .cadastro-page {
+        padding: 20px 15px;
+    }
+
+    .cadastro-card {
+        padding: 25px 20px;
+    }
+}
+
+.form-group select,.social-dialog select{box-sizing:border-box;width:100%;min-height:45px;padding:0 12px;border:1px solid #d7e0e7;border-radius:7px;background:#fff;color:#263746;font-size:14px}.form-group select:focus,.social-dialog select:focus{outline:2px solid #9fc5e7;border-color:#527da8}.form-group small{display:block;margin-top:6px;color:#718096;font-size:11px;line-height:1.45}
+

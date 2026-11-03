@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório municipal | Luz Cidadã</title>
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/staff.css"><link rel="stylesheet" href="css/operacao.css">
+</head>
+<body class="staff-dashboard">
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="sidebar-logo"><div class="logo-mark">LC</div><div><h2>Luz Cidadã</h2><span>Gestão de iluminação</span></div></div>
+      <nav class="menu staff-menu">
+        <a href="dashboard-gestor.html" class="menu-item"><span class="menu-icon">⌂</span><span>Visão geral</span></a>
+        <a href="ocorrencias-tecnico.html" class="menu-item"><span class="menu-icon">▤</span><span>Ocorrências</span></a>
+        <a href="ocorrencias-tecnico.html?visao=triagem" class="menu-item manager-only" data-triage-link hidden><span class="menu-icon">⇄</span><span>Triagem e distribuição</span></a>
+        <a href="mapa.html" class="menu-item"><span class="menu-icon">⌖</span><span>Mapa</span></a>
+        <a href="relatorio.html" class="menu-item active" aria-current="page"><span class="menu-icon">▥</span><span>Relatório</span></a>
+        <a href="perfil-gestor.html" class="menu-item"><span class="menu-icon person-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.7-3.7 3-5.5 7-5.5s6.3 1.8 7 5.5"></path></svg></span><span>Meu perfil</span></a>
+      </nav>
+      <div class="sidebar-help staff-help"><a href="termos.html">Termos de Uso</a><a href="privacidade.html">Privacidade</a><a href="suporte.html">Suporte</a></div>
+      <button id="logout" class="logout-button"><span>↪</span><span>Sair</span></button>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><span class="breadcrumb">GESTOR</span><h1>Relatório</h1></div><div class="user-area"><div class="user-avatar" id="avatar">G</div><div class="user-info"><strong id="nomeUsuario">Gestor</strong><span>Gestor municipal</span></div></div></header>
+      <section class="content">
+        <section class="staff-panel">
+          <div class="panel-heading"><div><h2>Panorama municipal</h2><p>Filtre e acompanhe os registros do sistema.</p></div><div class="period-chips"><button type="button" data-period="semana">Semana</button><button type="button" data-period="mes" class="selected">Mês</button><button type="button" data-period="ano">Ano</button></div></div>
+          <div class="report-filters">
+            <label>Período<select id="reportPeriod"><option value="semana">Últimos 7 dias</option><option value="mes" selected>Mês atual</option><option value="ano">Ano atual</option><option value="todos">Todo o período</option></select></label>
+            <label>Prioridade<select id="reportPriority"><option value="">Todas as prioridades</option><option>Alta</option><option>Média</option><option>Baixa</option><option>Urgente</option></select></label>
+            <label>Região<select id="reportRegion"><option value="">Todas as regiões</option></select></label>
+            <label>Tipo de problema<select id="reportType"><option value="">Todos os tipos</option></select></label>
+            <button id="filterReport" class="filter-button" type="button">Filtrar</button>
+          </div>
+          <p class="report-summary" id="reportSummary">Preparando resumo…</p>
+        </section>
+        <div class="report-cards">
+          <article class="report-card"><span>Em aberto</span><strong id="reportOpen">0</strong><small id="reportOpenPct">0% do recorte</small></article>
+          <article class="report-card"><span>Em atendimento</span><strong id="reportActive">0</strong><small id="reportActivePct">0% do recorte</small></article>
+          <article class="report-card"><span>Resolvidas</span><strong id="reportDone">0</strong><small id="reportDonePct">0% do recorte</small></article>
+          <article class="report-card"><span>Percentual resolvido</span><strong id="reportRate">0%</strong><small id="reportRateCount">0 de 0</small></article>
+        </div>
+        <div class="report-grid">
+          <section class="report-chart"><h2>Ocorrências por status</h2><p class="report-note" id="statusChartCaption">Participação no recorte filtrado</p>
+            <div class="bar-row"><span>Em aberto</span><div class="bar-track"><div class="bar-fill open" id="barOpen"></div></div><strong id="barOpenLabel">0 · 0%</strong></div>
+            <div class="bar-row"><span>Em atendimento</span><div class="bar-track"><div class="bar-fill active" id="barActive"></div></div><strong id="barActiveLabel">0 · 0%</strong></div>
+            <div class="bar-row"><span>Resolvidas</span><div class="bar-track"><div class="bar-fill done" id="barDone"></div></div><strong id="barDoneLabel">0 · 0%</strong></div>
+            <p class="report-note" id="statusChartFoot"></p>
+          </section>
+          <section class="report-chart"><h2>Resolução no recorte</h2><div class="donut-wrap"><div class="donut" id="resolutionDonut"><strong id="donutLabel">0%</strong></div><div><strong id="donutResolved">0 resolvidas</strong><p id="donutPending" class="report-note">0 não resolvidas</p></div></div><p class="report-note">O percentual considera somente as ocorrências incluídas nos filtros.</p></section>
+        </div>
+        <section class="report-chart recent-report"><div class="panel-heading"><div><h2>Registros por semana</h2><p>Distribuição de ocorrências abertas, em atendimento e concluídas.</p></div><button id="exportReport" class="table-view" type="button">Exportar CSV</button></div><div id="weeklyChart" class="weekly-chart"></div><p class="report-note">O arquivo exportado contém apenas dados do recorte filtrado; não inclui dados pessoais do solicitante.</p></section>
+      </section>
+    </main>
+  </div>
+  <script src="js/relatorio.js"></script>
+</body>
+</html>
+
+

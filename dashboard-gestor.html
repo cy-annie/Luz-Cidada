@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Visão geral - Gestor | Luz Cidadã</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/staff.css">
+</head>
+
+<body class="staff-dashboard">
+
+    <div class="dashboard">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <div class="logo-mark">
+                    LC
+                </div>
+
+                <div>
+                    <h2>Luz Cidadã</h2>
+                    <span>Gestão de iluminação</span>
+                </div>
+
+            </div>
+
+
+            <nav class="menu staff-menu">
+                <a href="dashboard-gestor.html" class="menu-item active" aria-current="page"><span class="menu-icon">⌂</span><span>Visão geral</span></a>
+                <a href="ocorrencias-tecnico.html" class="menu-item"><span class="menu-icon document-icon">▤</span><span>Ocorrências</span></a>
+        <a href="mapa.html" class="menu-item"><span class="menu-icon">⌖</span><span>Mapa</span></a>
+                <a href="relatorio.html" class="menu-item"><span class="menu-icon">▥</span><span>Relatório</span></a><a href="perfil-gestor.html" class="menu-item"><span class="menu-icon person-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.7-3.7 3-5.5 7-5.5s6.3 1.8 7 5.5"></path></svg></span><span>Meu perfil</span></a>
+            </nav>
+            <div class="sidebar-help staff-help" aria-label="Ajuda e informações">
+                <a href="termos.html">Termos de Uso</a>
+                <a href="privacidade.html">Privacidade</a>
+                <a href="suporte.html">Suporte</a>
+            </div>
+
+
+            <!-- SAIR -->
+            <button id="logout" class="logout-button">
+                <span>↪</span>
+                <span>Sair</span>
+            </button>
+
+        </aside>
+
+
+        <!-- ÁREA PRINCIPAL -->
+        <main class="main-content">
+
+            <!-- CABEÇALHO -->
+            <header class="topbar">
+
+                <div>
+
+                    <span class="breadcrumb">
+                        GESTOR
+                    </span>
+
+                    <h1>
+                        Visão geral
+                    </h1>
+
+                </div>
+
+
+                <div class="user-area">
+
+                    <div class="user-avatar" id="avatar">
+                        T
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong id="nomeUsuario">
+                            Gestor
+                        </strong>
+
+                        <span>
+                            Gestor
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- CONTEÚDO -->
+            <section class="content">
+
+
+                <!-- BOAS-VINDAS -->
+                <div class="welcome">
+
+                    <div>
+
+                        <h2>
+                            Olá, <span id="nomeBoasVindas">Gestor</span>!
+                        </h2>
+
+                        <p>
+                            Acompanhe e gerencie os chamados de iluminação pública.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FILTROS -->
+                <div class="dashboard-filters">
+
+                    <div class="search-box">
+
+                        <span class="search-icon">
+                            🔎
+                        </span>
+
+                        <input
+                            type="text"
+                            id="pesquisaChamados"
+                            placeholder="Pesquisar chamados..."
+                        >
+
+                    </div>
+
+
+                    <select id="periodoFiltro">
+
+                        <option value="dia">
+                            Dia
+                        </option>
+
+                        <option value="semana">
+                            Semana
+                        </option>
+
+                        <option value="mes" selected>
+                            Mês
+                        </option>
+
+                        <option value="semestre">Semestre</option>
+
+                        <option value="ano">
+                            Ano
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        type="button"
+                        id="btnFiltrar"
+                        class="filter-button"
+                    >
+                        Filtrar
+                    </button>
+
+                </div>
+
+
+                <!-- CARDS -->
+                <div class="cards technician-cards">
+
+
+                    <!-- ABERTAS -->
+                    <div class="info-card card-aberta">
+
+                        <div class="card-header">
+
+                            <span>Chamados abertos</span>
+
+                            <div class="card-icon">
+                                !
+                            </div>
+
+                        </div>
+
+                        <strong id="chamadosAbertos">
+                            0
+                        </strong>
+
+                        <small>
+                            Aguardando atendimento
+                        </small>
+
+                    </div>
+
+
+                    <!-- EM ANDAMENTO -->
+                    <div class="info-card card-andamento">
+
+                        <div class="card-header">
+
+                            <span>Em andamento</span>
+
+                            <div class="card-icon">
+                                ↻
+                            </div>
+
+                        </div>
+
+                        <strong id="chamadosAndamento">
+                            0
+                        </strong>
+
+                        <small>
+                            Em atendimento
+                        </small>
+
+                    </div>
+
+
+                    <!-- CONCLUÍDOS -->
+                    <div class="info-card card-concluida">
+
+                        <div class="card-header">
+
+                            <span>Concluídos</span>
+
+                            <div class="card-icon">
+                                ✓
+                            </div>
+
+                        </div>
+
+                        <strong id="chamadosConcluidos">
+                            0
+                        </strong>
+
+                        <small>
+                            Solicitações finalizadas
+                        </small>
+
+                    </div>
+
+
+                    <!-- SLA EM RISCO -->
+                    <div class="info-card card-sla">
+
+                        <div class="card-header">
+
+                            <span>SLA em risco</span>
+
+                            <div class="card-icon">
+                                ⏱
+                            </div>
+
+                        </div>
+
+                        <strong id="chamadosSla">
+                            0
+                        </strong>
+
+                        <small>
+                            Próximos do prazo
+                        </small>
+
+                    </div>
+
+
+                    <!-- TOTAL -->
+                    <div class="info-card card-total">
+
+                        <div class="card-header">
+
+                            <span>Total de chamados</span>
+
+                            <div class="card-icon">
+                                ☷
+                            </div>
+
+                        </div>
+
+                        <strong id="totalChamados">
+                            0
+                        </strong>
+
+                        <small>
+                            No período selecionado
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CHAMADOS -->
+                <section class="occurrences-section">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <h2>
+                                Chamados de iluminação
+                            </h2>
+
+                            <p>
+                                Consulte e abra o atendimento de cada ocorrência.
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="ocorrencias-tecnico.html"
+                            class="view-all"
+                        >
+                            Ver todos
+                        </a>
+
+                    </div>
+
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Nº</th>
+                                    <th>Tipo de problema</th>
+                                    <th>Local</th>
+                                    <th>Data</th>
+                                    <th>Status</th>
+                                    <th>Ação</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="tabelaChamadosTecnico">
+
+                                <tr>
+
+                                    <td
+                                        colspan="6"
+                                        class="empty-state"
+                                    >
+                                        Nenhum chamado encontrado.
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/dashboard-tecnico.js"></script>
+
+</body>
+
+</html>
+
+
+

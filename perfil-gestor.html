@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu perfil de gestão | Luz Cidadã</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/staff.css">
+  <link rel="stylesheet" href="css/operacao.css">
+</head>
+<body class="staff-dashboard">
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="sidebar-logo"><div class="logo-mark">LC</div><div><h2>Luz Cidadã</h2><span>Gestão de iluminação</span></div></div>
+      <nav class="menu staff-menu" aria-label="Navegação principal">
+        <a href="dashboard-gestor.html" class="menu-item"><span class="menu-icon">⌂</span><span>Visão geral</span></a>
+        <a href="ocorrencias-tecnico.html" class="menu-item"><span class="menu-icon">▤</span><span>Ocorrências</span></a>
+        <a href="ocorrencias-tecnico.html?visao=triagem" class="menu-item"><span class="menu-icon">⇄</span><span>Triagem e distribuição</span></a>
+        <a href="mapa.html" class="menu-item"><span class="menu-icon">⌖</span><span>Mapa</span></a>
+        <a href="relatorio.html" class="menu-item"><span class="menu-icon">▥</span><span>Relatório</span></a>
+        <a href="perfil-gestor.html" class="menu-item active" aria-current="page"><span class="menu-icon person-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.7-3.7 3-5.5 7-5.5s6.3 1.8 7 5.5"></path></svg></span><span>Meu perfil</span></a>
+      </nav>
+      <div class="sidebar-help staff-help"><a href="termos.html">Termos de Uso</a><a href="privacidade.html">Privacidade</a><a href="suporte.html">Suporte</a></div>
+      <button id="logout" class="logout-button" type="button"><span>↪</span><span>Sair</span></button>
+    </aside>
+    <main class="main-content">
+      <header class="topbar">
+        <div><span class="breadcrumb" id="roleLabel">GESTOR</span><h1>Meu perfil</h1></div>
+        <div class="user-area"><div class="user-avatar" id="avatar">G</div><div class="user-info"><strong id="nomeUsuario">Gestor</strong><span>Gestor</span></div></div>
+      </header>
+      <section class="content">
+        <div class="staff-profile-page">
+          <div class="staff-profile-intro"><div><h2>Seu perfil de gestão</h2><p>Consulte e atualize seus dados de contato e informações funcionais.</p></div><span class="demo-chip">PERFIL DE GESTÃO</span></div>
+          <form id="managerProfileForm">
+            <section class="staff-profile-card">
+              <div class="staff-profile-head">
+                <div class="staff-profile-photo" id="staffPhoto"><span id="staffInitial">G</span><button id="chooseStaffPhoto" type="button" aria-label="Alterar foto do perfil">✎</button></div>
+                <div><h2 id="staffNameHeading">Gestor</h2><p id="staffRoleHeading">Gestor de iluminação pública</p></div>
+                <input id="staffPhotoInput" type="file" accept="image/*" hidden>
+              </div>
+              <div class="staff-profile-grid">
+                <div><label for="staffName">Nome completo</label><input id="staffName" autocomplete="name" required></div>
+                <div><label for="staffEmail">E-mail</label><input id="staffEmail" type="email" readonly></div>
+                <div><label for="staffPhone">Telefone</label><input id="staffPhone" type="tel" autocomplete="tel" placeholder="(19) 99999-9999"></div>
+                <div><label for="staffAccessRole">Perfil de acesso</label><input id="staffAccessRole" value="Gestor" readonly></div>
+              </div>
+            </section>
+            <section class="staff-profile-card">
+              <div class="panel-heading"><div><h2>Informações de gestão</h2><p>Dados funcionais da sua atuação no sistema.</p></div></div>
+              <div class="staff-profile-grid">
+                <div><label for="staffFunction">Função</label><input id="staffFunction" placeholder="Ex.: Gestor de iluminação pública"></div>
+                <div><label for="staffRegistration">Matrícula</label><input id="staffRegistration" placeholder="Informe a matrícula funcional"></div>
+                <div><label for="staffMunicipality">Município de atuação</label><input id="staffMunicipality" placeholder="Ex.: Monte Mor — SP"></div>
+              </div>
+              <div class="profile-actions"><span>A gestão administra a triagem, distribuição e acompanhamento dos chamados.</span><div><button class="secondary" type="button" id="cancelProfile">Cancelar</button><button type="submit">Salvar alterações</button></div></div>
+            </section>
+          </form>
+          <section class="staff-profile-card security-inline"><div><h2>Segurança</h2><p>Atualize a senha da sua conta local.</p></div><button type="button" id="changeStaffPassword">Alterar senha</button></section>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="js/perfil-gestor.js"></script>
+</body>
+</html>
