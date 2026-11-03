@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocorrências | Luz Cidadã</title>
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css"><link rel="stylesheet" href="css/staff.css"><link rel="stylesheet" href="css/operacao.css">
+</head>
+<body class="staff-dashboard">
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="sidebar-logo"><div class="logo-mark">LC</div><div><h2>Luz Cidadã</h2><span>Gestão de iluminação</span></div></div>
+      <nav class="menu staff-menu">
+        <a href="dashboard-tecnico.html" class="menu-item" data-staff-link="dashboard"><span class="menu-icon">⌂</span><span>Visão geral</span></a>
+        <a href="ocorrencias-tecnico.html" class="menu-item active" aria-current="page"><span class="menu-icon">▤</span><span>Ocorrências</span></a>
+        <a href="ocorrencias-tecnico.html?visao=triagem" class="menu-item manager-only" data-triage-link hidden><span class="menu-icon">⇄</span><span>Triagem e distribuição</span></a>
+        <a href="mapa.html" class="menu-item"><span class="menu-icon">⌖</span><span>Mapa</span></a>
+        <a href="relatorio.html" class="menu-item manager-only" hidden><span class="menu-icon">▥</span><span>Relatório</span></a>
+        <a href="perfil-tecnico.html" class="menu-item"><span class="menu-icon person-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.7-3.7 3-5.5 7-5.5s6.3 1.8 7 5.5"></path></svg></span><span>Meu perfil</span></a>
+      </nav>
+      <div class="sidebar-help staff-help"><a href="termos.html">Termos de Uso</a><a href="privacidade.html">Privacidade</a><a href="suporte.html">Suporte</a></div>
+      <button id="logout" class="logout-button"><span>↪</span><span>Sair</span></button>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><span class="breadcrumb" id="roleLabel">TÉCNICO</span><h1>Ocorrências</h1></div><div class="user-area"><div class="user-avatar" id="avatar">T</div><div class="user-info"><strong id="nomeUsuario">Técnico</strong><span>Técnico</span></div></div></header>
+      <section class="content">
+        <section class="staff-panel">
+          <div class="panel-heading"><div><h2 id="listHeading">Chamados de iluminação</h2><p>Pesquise, filtre e abra um chamado para atualizar o atendimento.</p></div><span class="result-count" id="resultCount">0 chamados</span></div>
+          <div class="case-filters">
+            <label class="search-box"><span aria-hidden="true">⌕</span><input id="caseSearch" type="search" placeholder="Buscar protocolo, problema ou endereço"></label>
+            <select id="priorityFilter" aria-label="Filtrar por prioridade"><option value="">Prioridade: todas</option><option>Alta</option><option>Média</option><option>Baixa</option><option>Urgente</option></select>
+            <select id="statusFilter" aria-label="Filtrar por status"><option value="">Status: todos</option><option value="Aberta">Aberto</option><option value="Em andamento">Em atendimento</option><option value="Concluída">Concluído</option></select>
+            <button id="applyCaseFilters" class="filter-button" type="button">Filtrar</button>
+          </div>
+          <div class="table-container">
+            <table><thead><tr><th>Protocolo</th><th>Problema</th><th>Local</th><th>Prioridade</th><th>Status</th><th>Data</th><th>Ação</th></tr></thead><tbody id="staffCases"><tr><td colspan="7" class="empty-state">Carregando ocorrências…</td></tr></tbody></table>
+          </div>
+          <div class="table-foot"><span id="tableSummary">—</span><a href="mapa.html">Ver ocorrências no mapa</a></div>
+        </section>
+      </section>
+    </main>
+  </div>
+  <script src="js/ocorrencias-tecnico.js"></script>
+</body>
+</html>
+
+
+

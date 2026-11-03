@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atender chamado - Luz Cidadã</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/staff.css">
+    <link rel="stylesheet" href="css/atender-chamado.css">
+</head>
+
+<body class="staff-dashboard">
+
+    <div class="dashboard">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                <div class="logo-mark">
+                    LC
+                </div>
+
+                <div>
+                    <h2>Luz Cidadã</h2>
+                    <span>Gestão de iluminação</span>
+                </div>
+
+            </div>
+
+            <nav class="menu staff-menu">
+
+                <a href="dashboard-tecnico.html" class="menu-item" data-staff-link="dashboard">
+                    <span class="menu-icon">⌂</span>
+                    <span>Visão geral</span>
+                </a>
+
+                <a href="ocorrencias-tecnico.html" class="menu-item active">
+                    <span class="menu-icon document-icon">▤</span>
+                    <span>Ocorrências</span>
+                </a>
+
+                <a href="ocorrencias-tecnico.html?visao=triagem" class="menu-item manager-only" data-triage-link hidden><span class="menu-icon">⇄</span><span>Triagem e distribuição</span></a>
+        <a href="mapa.html" class="menu-item"><span class="menu-icon">⌖</span><span>Mapa</span></a>
+
+                <a href="relatorio.html" class="menu-item manager-only" hidden><span class="menu-icon">▥</span><span>Relatório</span></a>
+
+                <a href="perfil-tecnico.html" class="menu-item">
+                    <span class="menu-icon person-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.7-3.7 3-5.5 7-5.5s6.3 1.8 7 5.5"></path></svg></span>
+                    <span>Meu perfil</span>
+                </a>
+
+            </nav>
+            <div class="sidebar-help" aria-label="Ajuda e informações">
+                <a href="termos.html">Termos de Uso</a>
+                <a href="privacidade.html">Privacidade</a>
+                <a href="suporte.html">Suporte</a>
+            </div>
+
+            <button id="logout" class="logout-button">
+                <span>↪</span>
+                <span>Sair</span>
+            </button>
+
+        </aside>
+
+
+        <!-- ÁREA PRINCIPAL -->
+        <main class="main-content">
+
+            <!-- CABEÇALHO -->
+            <header class="topbar">
+
+                <div>
+
+                    <span class="breadcrumb">
+                        TÉCNICO / OCORRÊNCIA
+                    </span>
+
+                    <h1>
+                        Atendimento do chamado
+                    </h1>
+
+                </div>
+
+
+                <div class="user-area">
+
+                    <div class="user-avatar" id="avatar">
+                        T
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong id="nomeUsuario">
+                            Técnico
+                        </strong>
+
+                        <span>
+                            Técnico
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- CONTEÚDO -->
+            <section class="content">
+
+                <div class="attendance-page">
+
+                    <!-- CABEÇALHO DO CHAMADO -->
+                    <div class="attendance-header">
+
+                        <div>
+                            <span class="attendance-label">
+                                CHAMADO
+                            </span>
+
+                            <h2 id="tituloChamado">
+                                Ocorrência
+                            </h2>
+                        </div>
+
+                        <span
+                            id="statusChamado"
+                            class="status-badge status-aberta"
+                        >
+                            Aberta
+                        </span>
+
+                    </div>
+
+
+                    <!-- INFORMAÇÕES -->
+                    <div class="attendance-grid">
+
+                        <!-- DADOS DA OCORRÊNCIA -->
+                        <section class="attendance-card">
+
+                            <div class="card-section-title">
+                                <h3>
+                                    Informações da ocorrência
+                                </h3>
+                            </div>
+
+                            <div class="detail-grid">
+
+                                <div class="detail-item">
+                                    <span>Tipo de problema</span>
+                                    <strong id="tipoProblema">
+                                        -
+                                    </strong>
+                                </div>
+
+                                <div class="detail-item">
+                                    <span>Data de abertura</span>
+                                    <strong id="dataOcorrencia">
+                                        -
+                                    </strong>
+                                </div>
+
+                                <div class="detail-item"><span>Prioridade</span><strong id="prioridadeOcorrencia">Média</strong></div>
+
+                                <div class="detail-item">
+                                    <span>CEP</span>
+                                    <strong id="cepOcorrencia">
+                                        -
+                                    </strong>
+                                </div>
+
+                                <div class="detail-item">
+                                    <span>Cidade</span>
+                                    <strong id="cidadeOcorrencia">
+                                        -
+                                    </strong>
+                                </div>
+
+                                <div class="detail-item">
+                                    <span>Estado (UF)</span>
+                                    <strong id="estadoOcorrencia">-</strong>
+                                </div>
+
+                                <div class="detail-item detail-full">
+                                    <span>Endereço</span>
+                                    <strong id="enderecoOcorrencia">
+                                        -
+                                    </strong>
+                                </div>
+
+                                <div class="detail-item detail-full">
+                                    <span>Bairro</span>
+                                    <strong id="bairroOcorrencia">
+                                        -
+                                    </strong>
+                                </div>
+
+                                <div class="detail-item detail-full" id="referenciaItem" hidden>
+                                    <span>Ponto de referência</span>
+                                    <strong id="referenciaOcorrencia">-</strong>
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- DESCRIÇÃO -->
+                        <section class="attendance-card">
+
+                            <div class="card-section-title">
+                                <h3>
+                                    Descrição do problema
+                                </h3>
+                            </div>
+
+                            <div
+                                id="descricaoOcorrencia"
+                                class="description-box"
+                            >
+                                Nenhuma descrição informada.
+                            </div>
+                            <img id="fotoOcorrencia" class="occurrence-photo" alt="Foto anexada à ocorrência" hidden>
+
+                        </section>
+
+                    </div>
+
+
+                                        <section class="attendance-card triage-card" id="triageCard" hidden>
+                        <div class="card-section-title"><div><h3>Triagem e distribuição</h3><p>Defina a prioridade e o técnico responsável pelo chamado.</p></div></div>
+                        <div class="attendance-fields triage-fields">
+                            <div><label for="tecnicoResponsavel">Técnico responsável</label><select id="tecnicoResponsavel"><option value="">Sem atribuição</option></select></div>
+                            <div><label for="prioridadeTriagem">Prioridade</label><select id="prioridadeTriagem"><option>Baixa</option><option>Média</option><option>Alta</option><option>Urgente</option></select></div>
+                        </div>
+                        <div class="attendance-actions"><small>A atribuição, prioridade e responsável serão registrados no histórico.</small><button type="button" class="primary-button" id="salvarTriagem">Salvar triagem</button></div>
+                    </section>
+
+                    <section class="attendance-card history-card" id="historyCard">
+                        <div class="card-section-title"><div><h3>Histórico da ocorrência</h3><p>Rastreabilidade das mudanças de status, atribuição e atendimento.</p></div></div>
+                        <ol class="occurrence-timeline" id="occurrenceTimeline"></ol>
+                    </section>
+                    <!-- ATENDIMENTO -->
+                    <section class="attendance-card service-card">
+
+                        <div class="card-section-title">
+
+                            <div>
+                                <h3>
+                                    Atendimento
+                                </h3>
+
+                                <p>
+                                    Registre as informações referentes ao atendimento realizado.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="service-content">
+
+                            <div class="attendance-fields">
+                                <div><label for="statusAtendimento">Atualizar status</label><select id="statusAtendimento"><option value="Aberta">Aberto</option><option value="Em andamento">Em atendimento</option><option value="Concluída">Concluído</option></select><small>Escolha o andamento real deste chamado.</small></div>
+                                <div><label for="observacaoTecnica">Observação técnica</label><textarea id="observacaoTecnica" rows="5" placeholder="Descreva o diagnóstico e as condições do ponto de iluminação..."></textarea></div>
+                                <div><label for="registroManutencao">Registro da manutenção</label><textarea id="registroManutencao" rows="5" placeholder="Informe o serviço executado, os materiais utilizados e o resultado..."></textarea></div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="attendance-actions">
+
+                            <button
+                                type="button"
+                                class="secondary-button"
+                                onclick="voltarChamados()"
+                            >
+                                Voltar
+                            </button>
+
+                            <button type="button" id="salvarAtendimento" class="primary-button">Salvar atendimento</button>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/atender-chamado.js"></script>
+
+</body>
+
+</html>
+
+
+
+
