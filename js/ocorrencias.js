@@ -29,7 +29,9 @@ if (table) {
     table.replaceChildren();
     if (!items.length) {
         const row = table.insertRow(); const cell = row.insertCell(); cell.colSpan = 6; cell.className = "empty-state";
-        cell.textContent = staff ? "Nenhuma ocorrência registrada." : "Você ainda não registrou ocorrências.";
+        cell.textContent = staff
+            ? "Ainda não há ocorrências para exibir."
+            : "Você ainda não registrou ocorrências. Quando abrir uma, poderá acompanhar as atualizações por aqui.";
     } else items.forEach((item, index) => {
         const row = table.insertRow();
         [item.numeroChamado ? `#${item.numeroChamado}` : `#${index + 1}`, item.tipoProblema || "—", `${item.endereco || "—"}, ${item.numero || "—"}`, item.data || "—"].forEach(value => { row.insertCell().textContent = value; });
