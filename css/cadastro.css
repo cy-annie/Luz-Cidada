@@ -50,6 +50,7 @@
 
 .cadastro-title {
     margin-bottom: 25px;
+    text-align: center;
 }
 
 .cadastro-title h2 {
@@ -65,12 +66,12 @@
 }
 
 .form-group {
-    margin-bottom: 18px;
+    margin-bottom: 28px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 7px;
+    margin-bottom: 9px;
     color: #34495e;
     font-size: 13px;
     font-weight: 600;
@@ -132,7 +133,7 @@
     text-decoration: underline;
 }
 
-.terms-consent { display:flex; align-items:flex-start; gap:9px; margin:4px 0 16px; color:#526579; font-size:12px; line-height:1.5; }
+.terms-consent { display:flex; align-items:flex-start; gap:9px; margin:4px 0 24px; color:#526579; font-size:12px; line-height:1.5; }
 .terms-consent input { width:15px; height:15px; margin-top:1px; flex:none; accent-color:#19345b; }
 .terms-consent a { color:#356b9f; }
 .social-demo-note { margin:10px 0 0; color:#8491a0; font-size:11px; line-height:1.45; text-align:center; }
@@ -166,4 +167,3 @@
 }
 
 .form-group select,.social-dialog select{box-sizing:border-box;width:100%;min-height:45px;padding:0 12px;border:1px solid #d7e0e7;border-radius:7px;background:#fff;color:#263746;font-size:14px}.form-group select:focus,.social-dialog select:focus{outline:2px solid #9fc5e7;border-color:#527da8}.form-group small{display:block;margin-top:6px;color:#718096;font-size:11px;line-height:1.45}
-
