@@ -44,6 +44,6 @@ Entre as principais funcionalidades do sistema estão:
 
 **Desenvolvedora:** Thacyane
 
-**Gestora de Configurações:** Thacyane
+**Gestora de Configurações:** Milca
 
-**Documentação e revisão:** Milca
+**Documentação e revisão:** Thacyane
