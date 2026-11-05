@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suporte - Luz Cidadã</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/legal.css">
+</head>
+<body class="legal-page">
+  <main class="legal-card">
+    <a class="back-link" href="index.html">← Voltar ao sistema</a>
+    <div class="legal-brand"><span class="system-mark">LC</span><div><strong>Luz Cidadã</strong><small>Gestão de iluminação</small></div></div>
+    <h1>Suporte</h1><p>Conte-nos sua dúvida ou relate um problema nesta demonstração.</p>
+    <form id="supportForm" class="support-form">
+      <label for="supportName">Nome</label><input id="supportName" name="nome" autocomplete="name" required>
+      <label for="supportEmail">E-mail</label><input id="supportEmail" name="email" type="email" autocomplete="email" required>
+      <label for="supportTopic">Assunto</label><select id="supportTopic" name="assunto" required><option value="" disabled selected>Selecione um assunto</option><option>Cadastro e acesso</option><option>Registro de ocorrência</option><option>Privacidade</option><option>Outro</option></select>
+      <label for="supportMessage">Mensagem</label><textarea id="supportMessage" name="mensagem" rows="5" maxlength="1000" required></textarea>
+      <button class="primary-button" type="submit">Salvar solicitação</button>
+    </form>
+    <p class="support-note">Esta demonstração salva a solicitação somente neste navegador; ela não envia e-mail nem abre um chamado remoto.</p>
+  </main>
+  <script src="js/suporte.js"></script>
+</body></html>

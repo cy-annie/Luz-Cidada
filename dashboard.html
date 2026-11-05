@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Visão geral - Luz Cidadã</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+    <div class="sidebar-logo">
+        <div class="logo-mark">LC</div>
+        <span class="brand-copy"><strong>Luz Cidadã</strong><small>Gestão de iluminação</small></span>
+    </div>
+
+    <nav class="menu">
+
+        <a href="dashboard.html" class="menu-item active" aria-current="page">
+            <span class="menu-icon">⌂</span>
+            <span>Visão geral</span>
+        </a>
+
+        <a href="ocorrencias.html" class="menu-item">
+            <span class="menu-icon document-icon">▤</span>
+            <span>Ocorrências</span>
+        </a>
+
+        <a href="nova-ocorrencia.html" class="menu-item">
+            <span class="menu-icon">＋</span>
+            <span>Nova ocorrência</span>
+        </a>
+
+        <a href="perfil.html" class="menu-item">
+
+            <span class="menu-icon person-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c.7-3.7 3-5.5 7-5.5s6.3 1.8 7 5.5"></path></svg></span>
+            <span>Meu perfil</span>
+        </a>
+
+    </nav>
+            <div class="sidebar-help" aria-label="Ajuda e informações">
+                <a href="termos.html">Termos de Uso</a>
+                <a href="privacidade.html">Privacidade</a>
+                <a href="suporte.html">Suporte</a>
+            </div>
+
+    <button class="logout-button" id="logout">
+        <span class="menu-icon">↪</span>
+        <span>Sair</span>
+    </button>
+
+</aside>
+
+
+        <!-- ÁREA PRINCIPAL -->
+        <main class="main-content">
+
+            <!-- CABEÇALHO -->
+            <header class="topbar">
+
+                <div>
+                    <span class="breadcrumb">MORADOR</span>
+                    <h1>Visão geral</h1>
+                </div>
+
+
+                <div class="user-area">
+
+                    <div class="user-avatar" id="avatar">
+                        M
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong id="nomeUsuario">
+                            Morador
+                        </strong>
+
+                        <span>Morador</span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- CONTEÚDO -->
+            <section class="content">
+
+
+                <!-- BOAS-VINDAS -->
+                <div class="welcome">
+
+                    <div>
+
+                        <h2>
+                            Olá, <span id="nomeBoasVindas">Morador</span>!
+                        </h2>
+
+                        <p>
+                            Acompanhe suas solicitações de iluminação pública.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="nova-ocorrencia.html"
+                        class="new-occurrence"
+                    >
+                        + Nova ocorrência
+                    </a>
+
+                </div>
+
+
+                <!-- CARDS -->
+                <div class="cards">
+
+
+                    <!-- ABERTAS -->
+                    <div class="info-card card-aberta">
+
+                        <div class="card-header">
+
+                            <span>Ocorrências abertas</span>
+
+                            <div class="card-icon">
+                                !
+                            </div>
+
+                        </div>
+
+                        <strong id="ocorrenciasAbertas">
+                            0
+                        </strong>
+
+                        <small>
+                            Aguardando atendimento
+                        </small>
+
+                    </div>
+
+
+                    <!-- ANDAMENTO -->
+                    <div class="info-card card-andamento">
+
+                        <div class="card-header">
+
+                            <span>Em andamento</span>
+
+                            <div class="card-icon">
+                                ↻
+                            </div>
+
+                        </div>
+
+                        <strong id="ocorrenciasAndamento">
+                            0
+                        </strong>
+
+                        <small>
+                            Em atendimento
+                        </small>
+
+                    </div>
+
+
+                    <!-- CONCLUÍDAS -->
+                    <div class="info-card card-concluida">
+
+                        <div class="card-header">
+
+                            <span>Concluídas</span>
+
+                            <div class="card-icon">
+                                ✓
+                            </div>
+
+                        </div>
+
+                        <strong id="ocorrenciasConcluidas">
+                            0
+                        </strong>
+
+                        <small>
+                            Solicitações finalizadas
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MINHAS OCORRÊNCIAS -->
+                <section class="occurrences-section">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <h2>
+                                Minhas ocorrências
+                            </h2>
+
+                            <p>
+                                Acompanhe as solicitações registradas.
+                            </p>
+
+                        </div>
+
+
+                        <a
+                            href="ocorrencias.html"
+                            class="view-all"
+                        >
+                            Ver todas
+                        </a>
+
+                    </div>
+
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Nº</th>
+                                    <th>Tipo de problema</th>
+                                    <th>Local</th>
+                                    <th>Data</th>
+                                    <th>Status</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="tabelaOcorrencias">
+
+                                <tr>
+
+                                    <td
+                                        colspan="5"
+                                        class="empty-state"
+                                    >
+                                        Nenhuma ocorrência registrada.
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

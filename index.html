@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luz Cidadã | Acesso</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <section class="login-card">
+
+            <div class="login-content">
+
+                <div class="system-name">
+                    <span class="system-mark">LC</span>
+                    <span>Luz Cidadã <small>Gestão de iluminação</small></span>
+                </div>
+
+                <h1>Faça o seu login!</h1>
+
+                <p class="login-description">
+                    Acesse o sistema para continuar.
+                </p>
+
+                <form id="loginForm">
+
+                    <div class="form-group">
+                        <label for="tipoUsuario">Tipo de usuário</label>
+
+                        <div class="input-box">
+
+                            <svg class="field-icon" viewBox="0 0 24 24">
+                                <circle cx="12" cy="8" r="3.5"></circle>
+                                <path d="M5 20c.7-3.7 3-5.5 7-5.5s6.3 1.8 7 5.5"></path>
+                            </svg>
+
+                            <select id="tipoUsuario" required>
+                                <option value="" disabled selected>
+                                    Selecione o tipo de usuário
+                                </option>
+                                <option value="morador">Morador</option>
+                                <option value="tecnico">Técnico</option>
+                                <option value="gestor">Gestor</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="email">E-mail</label>
+
+                        <div class="input-box">
+
+                            <svg class="field-icon" viewBox="0 0 24 24">
+                                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                <path d="M4 7l8 6 8-6"></path>
+                            </svg>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Digite seu e-mail"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="senha">Senha</label>
+
+                        <div class="input-box">
+
+                            <svg class="field-icon" viewBox="0 0 24 24">
+                                <rect x="5" y="10" width="14" height="10" rx="2"></rect>
+                                <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+                            </svg>
+
+                            <input
+                                type="password"
+                                id="senha"
+                                placeholder="Digite sua senha"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="mostrarSenha"
+                                aria-label="Mostrar senha"
+                            >
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z"></path>
+                                    <circle cx="12" cy="12" r="2.5"></circle>
+                                </svg>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="login-options">
+
+                        <label class="remember">
+                            <input type="checkbox" id="lembrar">
+                            <span>Lembrar de mim</span>
+                        </label>
+
+                        <button
+                            type="button"
+                            class="forgot-password"
+                            id="esqueciSenha"
+                        >
+                            Esqueci minha senha
+                        </button>
+
+                    </div>
+
+                    <button type="submit" class="login-button">
+                        Entrar
+                    </button>
+
+                </form>
+
+                <div class="create-account">
+                    <span>Ainda não possui uma conta?</span>
+                    <button type="button" id="criarConta">
+                        Crie sua conta
+                    </button>
+                </div>
+
+                <div class="divider">
+                    <span>Ou entrar com</span>
+                </div>
+
+                <div class="social-login">
+
+                    <button type="button" class="social-button" id="googleLogin" data-provider="Google">
+
+                        <svg viewBox="0 0 24 24" class="social-icon google">
+                            <path d="M21.8 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.5a4.7 4.7 0 0 1-2 3.1v2.6h3.2c1.9-1.8 3.1-4.4 3.1-7.5z"></path>
+                            <path d="M12 22c2.7 0 5-.9 6.7-2.4l-3.2-2.6c-.9.6-2 1-3.5 1-2.7 0-5-1.8-5.8-4.3H2.9v2.7A10.1 10.1 0 0 0 12 22z"></path>
+                            <path d="M6.2 13.7a6 6 0 0 1 0-3.4V7.6H2.9a10 10 0 0 0 0 8.8l3.3-2.7z"></path>
+                            <path d="M12 6c1.5 0 2.9.5 4 1.6l3-3C17 2.9 14.7 2 12 2A10.1 10.1 0 0 0 2.9 7.6l3.3 2.7C7 7.8 9.3 6 12 6z"></path>
+                        </svg>
+
+                        Google
+
+                    </button>
+
+                    <button type="button" class="social-button" id="appleLogin" data-provider="Apple">
+
+                        <svg viewBox="0 0 24 24" class="social-icon apple">
+                            <path d="M16.7 12.7c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.7.8-3.4.8-.7 0-1.8-.8-3-.8-1.5 0-2.9.9-3.7 2.2-1.6 2.8-.4 6.9 1.1 9.2.8 1.1 1.6 2.3 2.8 2.3 1.1 0 1.6-.7 3-.7 1.4 0 1.8.7 3 .7 1.2 0 2-1.1 2.7-2.2.9-1.3 1.2-2.7 1.2-2.8-.1 0-2.3-.9-2.3-3.4z"></path>
+                            <path d="M14.5 6c.6-.8 1-1.9.9-3-1 .1-2.1.7-2.7 1.5-.6.7-1.1 1.8-.9 2.8 1 .1 2.1-.5 2.7-1.3z"></path>
+                        </svg>
+
+                        Apple
+
+                    </button>
+
+                </div>
+
+                <p class="social-demo-note">Acesso social nesta demonstração: os botões não confirmam uma conta Google ou Apple.</p>
+
+            </div>
+
+            <div class="city-illustration">
+
+                <svg viewBox="0 0 700 150" preserveAspectRatio="xMidYMid meet">
+
+                    <line x1="80" y1="128" x2="620" y2="128"></line>
+
+                    <rect x="120" y="75" width="75" height="53"></rect>
+                    <rect x="135" y="90" width="10" height="12"></rect>
+                    <rect x="158" y="90" width="10" height="12"></rect>
+                    <rect x="181" y="90" width="10" height="12"></rect>
+
+                    <rect x="215" y="55" width="95" height="73"></rect>
+                    <rect x="232" y="72" width="11" height="12"></rect>
+                    <rect x="258" y="72" width="11" height="12"></rect>
+                    <rect x="284" y="72" width="11" height="12"></rect>
+                    <rect x="232" y="96" width="11" height="12"></rect>
+                    <rect x="258" y="96" width="11" height="12"></rect>
+                    <rect x="284" y="96" width="11" height="12"></rect>
+
+                    <rect x="330" y="82" width="65" height="46"></rect>
+                    <rect x="345" y="96" width="10" height="11"></rect>
+                    <rect x="370" y="96" width="10" height="11"></rect>
+
+                    <rect x="425" y="68" width="85" height="60"></rect>
+                    <rect x="440" y="84" width="10" height="11"></rect>
+                    <rect x="465" y="84" width="10" height="11"></rect>
+                    <rect x="490" y="84" width="10" height="11"></rect>
+
+                    <line x1="105" y1="128" x2="105" y2="45"></line>
+                    <path d="M105 45h28"></path>
+                    <path d="M125 45l10 8"></path>
+
+                    <line x1="555" y1="128" x2="555" y2="38"></line>
+                    <path d="M555 38h30"></path>
+                    <path d="M580 38l10 8"></path>
+
+                    <circle cx="134" cy="53" r="5"></circle>
+                    <circle cx="586" cy="46" r="5"></circle>
+
+                </svg>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-inner">
+
+            <span>© 2026 Luz Cidadã</span>
+
+            <div>
+                <a href="termos.html">Termos de Uso</a>
+                <a href="privacidade.html">Privacidade</a>
+                <a href="suporte.html">Suporte</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

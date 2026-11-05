@@ -1,0 +1,285 @@
+/* =========================
+   ATENDIMENTO DO CHAMADO
+========================= */
+
+.attendance-page {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* CABEÇALHO */
+
+.attendance-header {
+    background: #ffffff;
+    border: 1px solid #e1e7eb;
+    border-radius: 9px;
+
+    padding: 20px 22px;
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.attendance-label {
+    color: #718096;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.attendance-header h2 {
+    margin: 5px 0 0;
+
+    color: #172b3a;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+
+/* GRID */
+
+.attendance-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+
+/* CARDS */
+
+.attendance-card {
+    background: #ffffff;
+
+    border: 1px solid #e1e7eb;
+    border-radius: 9px;
+
+    overflow: hidden;
+}
+
+.card-section-title {
+    padding: 18px 20px;
+
+    border-bottom: 1px solid #e8edf0;
+}
+
+.card-section-title h3 {
+    margin: 0;
+
+    color: #172b3a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card-section-title p {
+    margin: 5px 0 0;
+
+    color: #718096;
+    font-size: 11px;
+}
+
+
+/* DETALHES */
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    padding: 20px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.detail-item span {
+    color: #8a99a6;
+    font-size: 10px;
+}
+
+.detail-item strong {
+    color: #263746;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.detail-full {
+    grid-column: 1 / -1;
+}
+
+
+/* DESCRIÇÃO */
+
+.description-box {
+    min-height: 130px;
+
+    padding: 20px;
+
+    color: #465765;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.occurrence-photo { display:block; max-width:min(100%,520px); max-height:360px; margin:16px 20px; border-radius:8px; object-fit:contain; }
+.attendance-actions button:focus-visible { outline:3px solid #9fc5e7; outline-offset:2px; }
+.attendance-actions button:disabled { opacity:.55; cursor:not-allowed; }
+
+
+/* ATENDIMENTO */
+
+.service-card {
+    margin-bottom: 20px;
+}
+
+.service-content {
+    padding: 20px;
+}
+
+.service-content label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #465765;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.service-content textarea {
+    width: 100%;
+    min-height: 140px;
+
+    box-sizing: border-box;
+
+    padding: 12px;
+
+    border: 1px solid #dce3e8;
+    border-radius: 6px;
+
+    background: #f8fafb;
+
+    color: #263746;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+    resize: vertical;
+    outline: none;
+}
+
+.service-content textarea:focus {
+    border-color: #2878b5;
+    background: #ffffff;
+}
+
+.attendance-fields { display:grid; grid-template-columns:.9fr 1fr 1fr; gap:16px; }
+.attendance-fields label { display:block; margin:0 0 8px; color:#465765; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.35px; }
+.attendance-fields select,.attendance-fields textarea { width:100%; box-sizing:border-box; padding:12px; border:1px solid #dce3e8; border-radius:12px; background:#f8fafb; color:#263746; font:13px Arial,sans-serif; }
+.attendance-fields select { height:48px; }
+.attendance-fields textarea { min-height:120px; resize:vertical; }
+.attendance-fields small { display:block; margin-top:10px; color:#718096; font-size:11px; line-height:1.4; }
+
+
+/* BOTÕES */
+
+.attendance-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    padding: 0 20px 20px;
+}
+
+.attendance-actions button {
+    height: 38px;
+
+    padding: 0 18px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.secondary-button {
+    border: 1px solid #dce3e8;
+    background: #ffffff;
+    color: #465765;
+}
+
+.secondary-button:hover {
+    background: #f5f7f9;
+}
+
+.primary-button {
+    border: none;
+    background: #19345b;
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background: #25476e;
+}
+
+.success-button {
+    border: none;
+    background: #32965f;
+    color: #ffffff;
+}
+
+.success-button:hover {
+    background: #28784c;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+
+    .attendance-fields { grid-template-columns:1fr; }
+
+    .attendance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .attendance-actions {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .attendance-actions {
+        flex-direction: column;
+    }
+
+    .attendance-actions button {
+        width: 100%;
+    }
+
+}
+.triage-card .attendance-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.triage-card .attendance-actions { justify-content: space-between; align-items: center; }
+.history-card { margin-top: 22px; }
+.occurrence-timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.occurrence-timeline li { border-left: 3px solid #82b5f7; padding: 8px 14px; background: #f7f9fc; border-radius: 0 10px 10px 0; display: grid; gap: 4px; }
+.occurrence-timeline li strong { color: #19345b; }
+.occurrence-timeline li span, .occurrence-timeline li p, .timeline-empty { color: #6e7786; font-size: 14px; margin: 0; }
+@media (max-width: 800px) { .triage-card .attendance-fields { grid-template-columns: 1fr; } .triage-card .attendance-actions { align-items: stretch; flex-direction: column; } }
